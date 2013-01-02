@@ -1,0 +1,74 @@
+/* General */
+html { font-size: 16px; }
+
+/* Search Form */
+
+.form_section { display: block; margin: 20px 0; }
+.form_section h2 { float: left; display: block; font-family: "geared_slabbold"; font-size: 3em; margin: 0; width: 100px; }
+.form_section span { float: left; display: block; font-family: "geared_slabextrabold"; font-size: 3em; margin: 0; }
+
+#search_bar { float: left; }
+#search_bar input { float: left; border: none; margin: 0 10px; font-size: 3em; color: #cccccc; font-family: "geared_slabthin"; }
+
+/* Fonts */
+
+
+@font-face {
+    font-family: 'geared_slabregular';
+    src: url('fonts/gearedslab-webfont.eot');
+    src: url('fonts/gearedslab-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gearedslab-webfont.woff') format('woff'),
+         url('fonts/gearedslab-webfont.ttf') format('truetype'),
+         url('fonts/gearedslab-webfont.svg#geared_slabregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'geared_slabbold';
+    src: url('fonts/gearedslab-bold-webfont.eot');
+    src: url('fonts/gearedslab-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gearedslab-bold-webfont.woff') format('woff'),
+         url('fonts/gearedslab-bold-webfont.ttf') format('truetype'),
+         url('fonts/gearedslab-bold-webfont.svg#geared_slabregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'geared_slabextrabold';
+    src: url('fonts/gearedslab-extrabold-webfont.eot');
+    src: url('fonts/gearedslab-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gearedslab-extrabold-webfont.woff') format('woff'),
+         url('fonts/gearedslab-extrabold-webfont.ttf') format('truetype'),
+         url('fonts/gearedslab-extrabold-webfont.svg#geared_slabextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'geared_slabthin';
+    src: url('fonts/gearedslab-light-webfont.eot');
+    src: url('fonts/gearedslab-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gearedslab-light-webfont.woff') format('woff'),
+         url('fonts/gearedslab-light-webfont.ttf') format('truetype'),
+         url('fonts/gearedslab-light-webfont.svg#geared_slabthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Clearfix */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

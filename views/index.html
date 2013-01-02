@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+
+    <head>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+        
+        <title>{{title}}</title>
+        
+        <!-- Stylesheets. -->
+        <link rel="stylesheet" href="stylesheets/style.css" media="Screen" type="text/css" />
+        <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
+        <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
+        
+        <!-- Scripts. -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="/scripts/handlebars.js"></script>
+        <script type="text/javascript" src="/scripts/autogrow.js"></script>
+        <script type="text/javascript" src="/scripts/ui.js"></script>
+        
+        <!-- Open Graph tags. -->
+        <meta property="og:title" content="<%= app.name %>" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="<%= url() %>" />
+        <meta property="og:image" content="<%= url('/logo.png') %>" />
+        <meta property="og:site_name" content="<%= app.name %>" />
+        <meta property="og:description" content="My first app" />
+        <meta property="fb:app_id" content="<%= app.id %>" />
+    
+    </head>
+  
+    <body>
+      
+        <!-- Facebook div, required for API. -->
+        <div id="fb-root"></div>
+        
+        <!-- Load Facebook API and check login status. -->
+        <script type="text/javascript">
+        
+            window.fbAsyncInit = function() {
+            
+                FB.init({
+                    appId      : '{{appId}}',
+                    channelUrl : '{{channelFile}}',
+                    status     : true,
+                    cookie     : true,
+                    xfbml      : true
+                });
+                
+                // Listen to the auth.login which will be called when the user logs in
+                // using the Login button
+                FB.Event.subscribe('auth.login', function(response) {
+                // We want to reload the page now so PHP can read the cookie that the
+                // Javascript SDK sat. But we don't want to use
+                // window.location.reload() because if this is in a canvas there was a
+                // post made to this page and a reload will trigger a message to the
+                // user asking if they want to send data again.
+                window.location = window.location;
+                });
+                
+                //FB.Canvas.setAutoGrow();
+            
+            };
+        
+            // Load the SDK Asynchronously.
+            (function(d, debug){
+                var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement('script'); js.id = id; js.async = true;
+                js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+                ref.parentNode.insertBefore(js, ref);
+            }(document, /*debug*/ false));
+          
+        </script>
+        
+        <!-- Render search bar. -->
+        <section id="search_form">
+        
+            <div class="form_section cf">
+                <h2>find</h2>
+                <div id="search_bar" class="form_controls">
+                    <span>{</span>
+                    <input>
+                    <button></button>
+                    <span>}</span>
+                </div>
+            </div>
+            <div class="form_section cf">
+                <h2>filter</h2>    
+                <div id="search_filter" class="form_controls">
+                    <span>{</span>
+                    <span>}</span>
+                </div> 
+            </div>
+        
+        </section>
+        
+        <!-- Rednder results section. -->
+        <section id="results">
+            
+        </section>
+    
+    </body>
+
+</html>
+
+
