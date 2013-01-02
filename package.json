@@ -1,0 +1,17 @@
+{
+  "name":    "FaceFinder",
+  "version": "0.0.1",
+
+  "description": "Search engine app for Facebook.",
+
+  "dependencies": {
+    "async":     "0.1.18",
+    "express":   "2.4.6",
+    "faceplate": "0.0.4"
+  },
+
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
