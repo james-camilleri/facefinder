@@ -17,26 +17,16 @@ app.use(require('faceplate').middleware({
         scope:  'user_likes,user_photos,user_photo_video_tags'
     }));
 
-//    express.static(__dirname + '/public'),
-//    express.logger(),
-//    express.bodyParser(),
-//    express.cookieParser(),
-//    // set this to a secret value to encrypt session cookies
-//    express.session({ secret: process.env.SESSION_SECRET || 'secret123' }),
-//    require('faceplate').middleware({
-//        app_id: 581546131861642,
-//        secret: "9d39b7d873b6b6d3ed27d536d05ad47b",
-//        scope:  'user_likes,user_photos,user_photo_video_tags'
-//    })
-
 // Set default template engine to Handlebars.js using hbs package.
 // Add html filetype as template for development.
 app.set('view engine', 'hbs');
 app.engine('html', require('hbs').__express);
 
 // Launch server.
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4444;
 http.createServer(app).listen(port);
+
+console.log("Running on " + port);
 
 // Render the index page.
 function render_index(req, res) {
@@ -55,7 +45,7 @@ function search(req, res) {
 
   // Check if user is logged in to Facebook.
   if (req.facebook.token) {
-
+    req
   } else {
     console.log("Not logged in.");
   }

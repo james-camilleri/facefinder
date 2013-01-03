@@ -43,7 +43,8 @@
 
                         // Animate width
                         if (isValidWidthChange) {
-                            input.width(newWidth);
+                            input.stop();
+                            input.animate({width: newWidth}, 150);
                         }
 
                     };

@@ -87,12 +87,45 @@
                 </div>
             </div>
             <div class="form_section cf">
-                <h2>filter</h2>    
                 <div id="search_filter" class="form_controls">
-                    <span>{</span>
-                    <label for="filter_video">Video</label>
-                    <input id="filter_video" type="checkbox">
-                    <span>}</span>
+                    <div class="filter_container cf">
+                        <h3>what</h3>
+                        <span>{</span>
+                        <div class="filter first">
+                            <input id="filter_video" type="checkbox">
+                            <label for="filter_video">video</label>
+                        </div>
+                        <div class="filter">
+                            <input id="filter_pictures" type="checkbox">
+                            <label for="filter_pictures">pictures</label>
+                        </div>
+                        <div class="filter last">
+                            <input id="filter_links" type="checkbox">
+                            <label for="filter_links">links</label>
+                        </div>
+                        <span>}</span>
+                    </div>
+                    <div class="filter_container cf">
+                        <h3>when</h3>
+                        <span>{</span>
+                        <div class="filter first">
+                            <input id="filter_year" type="checkbox">
+                            <label for="filter_year">this year</label>
+                        </div>
+                        <div class="filter">
+                            <input id="filter_month" type="checkbox">
+                            <label for="filter_month">this month</label>
+                        </div>
+                        <div class="filter">
+                            <input id="filter_week" type="checkbox">
+                            <label for="filter_week">this week</label>
+                        </div>
+                        <div class="filter last">
+                            <input id="filter_day" type="checkbox">
+                            <label for="filter_day">today</label>
+                        </div>
+                        <span>}</span>
+                    </div>
                 </div> 
             </div>
         

@@ -7,13 +7,22 @@ html { font-size: 16px; padding: 0 30px; background: #F4F4F4; }
 
 .form_section { display: block; margin: 20px 0; }
 .form_section h2 { float: left; display: block; font-family: "geared_slabbold"; font-size: 3em; margin: 0; width: 100px; }
+.form_section h3 { float: left; display: block; font-family: "geared_slabbold"; font-size: 2em; margin: 0; width: 100px; }
 .form_section span { float: left; display: block; font-family: "geared_slabextrabold"; font-size: 3em; margin: 0; }
 
 #search_bar { float: left; }
 #search_bar input { float: left; border: none; margin: 0 10px; font-size: 3em; color: #cccccc; font-family: "geared_slabthin"; background: none; }
 
-/* Fonts */
+/* Filters */
 
+.search_filter {}
+.filter_container { display: block; }
+.filter_container span { float: left; display: block; font-family: "geared_slabextrabold"; font-size: 2em; margin: 0; }
+.filter { float: left; display: block; margin: 0 10px; font-family: "geared_slabthin"; line-height: 2.5em; }
+.filter.first { margin-left: 15px;}
+.filter.last { margin-right: 15px; }
+
+/* Fonts */
 
 @font-face {
     font-family: 'geared_slabregular';
