@@ -3,7 +3,7 @@ html { font-size: 16px; padding: 0 30px; background: url(/images/blue_stripes.jp
 
 /* Search Form */
 
-#search_form { background: url(/images/dot.gif) repeat-x left bottom; padding: 30px 0; }
+#search_form { background: url(/images/dot.png) repeat-x left bottom; padding: 30px 0; }
 
 .form_section { display: block; margin: 20px 0; }
 .form_section h2 { float: left; display: block; font-family: "geared_slabbold"; font-size: 3em; margin: 0; width: 100px; }
