@@ -6,7 +6,6 @@
 
   "dependencies": {
     "async":     "0.1.18",
-    "express":   "2.0.x",
     "faceplate": "0.0.4",
     "hbs": "2.x"
   }
