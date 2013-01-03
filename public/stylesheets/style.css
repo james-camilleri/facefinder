@@ -10,7 +10,7 @@ html { font-size: 16px; padding: 0 30px; background: url(/images/blue_stripes.jp
 .form_section span { float: left; display: block; font-family: "geared_slabextrabold"; font-size: 3em; margin: 0; }
 
 #search_bar { float: left; }
-#search_bar input { float: left; border: none; margin: 0 10px; font-size: 3em; color: #cccccc; font-family: "geared_slabthin"; }
+#search_bar input { float: left; border: none; margin: 0 10px; font-size: 3em; color: #cccccc; font-family: "geared_slabthin"; background: none; }
 
 /* Fonts */
 
